@@ -1,3 +1,5 @@
+const list = document.getElementById("todo-list")
+
 let arrayOfTodos = [
     {
     "userId": 14,
@@ -10,18 +12,7 @@ let arrayOfTodos = [
     "id": 2,
     "title": "delectus aut autem",
     "completed": false
-  }
-]
-console.log(arrayOfTodos[0].userId) 
-console.log(arrayOfTodos[1].userId)
-console.log(arrayOfTodos[0].id)
-console.log(arrayOfTodos[1].id)
-console.log(arrayOfTodos[0].title)
-console.log(arrayOfTodos[1].title)
-console.log(arrayOfTodos[0].completed)
-console.log(arrayOfTodos[1].completed)
-
-}
+  }]
 
   const fetchTodos = () => {
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -33,7 +24,6 @@ console.log(arrayOfTodos[1].completed)
     console.log(arrayOfTodos)
   }
 
-const list = document.getElementById("todo-list")
 
   // function myFunction() {
   //   var para =document.createElement("P");
@@ -52,9 +42,17 @@ const list = document.getElementById("todo-list")
 // }
 
 // arrayOfTodos iterate i . title
-element.innerhtml = arrayOfTodos[i].title
-++ i < arrayOfTodos.length
+// element.innerhtml = arrayOfTodos[i].title
+// ++ i < arrayOfTodos.length
 
   const populateTodos = () => {
-     
-  }
+     for (let i = 0; i < arrayOfTodos.length; i++) {
+      let element = document.createElement('li')
+      let text = document.createTextNode(arrayOfTodos[i].title)
+      element.appendChild(text)
+      console.log(element)
+      list.appendChild(element)
+       }
+    }
+
+  
