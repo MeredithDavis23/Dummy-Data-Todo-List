@@ -24,35 +24,37 @@ let arrayOfTodos = [
     console.log(arrayOfTodos)
   }
 
-
-  // function myFunction() {
-  //   var para =document.createElement("P");
-  //   para.innerHTML ="This is a paragraph.";
-  //   document.getElementById("myDIV").appendChild(para);
-  // }
-
-
-//   const element = () =>{
-//      document.createElement("list") }
+ const populateTodos = () => {
+   for (let i = 0; i < arrayOfTodos.length; i++) {
+     let element = document.createElement('li')
+     let text = document.createTextNode(arrayOfTodos[i].title)
+     list.appendChild(element)
+     element.appendChild(text)
+     console.log(element)
+   }
+   if (arrayOfTodos[i].completed==false) {
+    text.element.add(".redText")
+     } else {
+       text.element.add(".greenText")
+     }
+ }
+ 
+const filterTodos = () {
   
-//   function myFunction() {
-//   var ol =document.createElement("li");
-//   ol.innerHTML ="This is a list.";
-//   document.getElementById("todo-list").appendChild(ol);
-// }
-
-// arrayOfTodos iterate i . title
-// element.innerhtml = arrayOfTodos[i].title
-// ++ i < arrayOfTodos.length
-
-  const populateTodos = () => {
-     for (let i = 0; i < arrayOfTodos.length; i++) {
-      let element = document.createElement('li')
-      let text = document.createTextNode(arrayOfTodos[i].title)
-      element.appendChild(text)
-      console.log(element)
-      list.appendChild(element)
-       }
-    }
-
+}
+ 
+ 
+ 
+  // const populateTodos = () => {
+  //    for (let i = 0; i < arrayOfTodos.length; i++) {
+  //     let listItem = document.createElement('li');
+  //     let textNode = document.createTextNode(arrayOfTodos[i].title);
+  //     listItem.appendChild(textNode);
+  //     let element = document.getElementById("todo-list");
+  //     element.appendChild(listItem);
+  //     if (arrayOfTodos[i].completed ==false) {
+  //       listItem.classList.add(".redText")
+  //       } else {
+  //         listItem.classList.add(".greenText")
+  //       }
   
